@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    background-color: #293135;
+    height: 100vh;
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+}
+.header-container > h3{
+    color: white;
+    font-family: "Lexend Exa", sans-serif;
+    margin: 4vh 4vw 4vh 7vw;
+    font-size: 2rem;
+}
+.header-container > h3 > span{
+    color: #00FFF0;
+}
+.header-container nav {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 2vh 0 0 0;
+}
+.header-container > nav > a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1vw;
+    font-family: "Manjari", sans-serif;
+    transition: 1s;
+    padding-bottom: 4vh;
+    font-weight: 550;
+}
+.header-container > nav > a:hover{
+    cursor: pointer;
+    color: #00FFF0;
+}
+.header-container > nav > .active{
+    color: #00FFF0;
+}
+main{
+    width: 100%;
+    height: 80vh;
+}
+.title{
+    color: #00FFF0;
+    text-align: center;
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 2rem;
+}
+.container{
+    width: 49vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+}
+
+.card-container{
+    height: 20vw;
+    width: 50vw;
+    overflow: hidden;
+    display: flex;
+    
+    
+}
+.arrows {
+    padding-right: 2.5vw;
+    display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  }
+  
+
+.arrows > i{
+    color: #00FFF0;
+    font-size: 2rem;
+    
+    cursor: pointer;
+   
+}
+
+
+#foward-arrow{
+    
+    margin-right: 2vw;
+}
+#back-arrow{
+    
+    margin-left: 2vw;
+}
+.card-slider {
+    display: flex;
+    width: fit-content;
+    padding-left:  5vw;
+    
+    
+}
+.card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 20vw;
+    width: 40vw;
+    margin-right: 5.1vw;
+    
+}
+ .card-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.11), #00FFF0);
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2vw;
+    transition: height 0.5s;
+}
+.layer h5{
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: "Lexend Exa", sans-serif;
+}
+.card:hover{
+    box-shadow: 1px 1px 20px #00FFF0;
+}
+.card:hover .card-image{
+    transform: scale(1.1);
+}
+.card:hover .layer{
+    height: 100%;
+}

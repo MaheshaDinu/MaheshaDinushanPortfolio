@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="/CSS/Projects.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h3>MAH<span>3</span>X</h3>
+        <nav>
+          <a href="/index.html">Home</a>
+          <a href="/Pages/About.html">About</a>
+          <a href="/Pages/Education.html">Education</a>
+          <a href="/Pages/Experience.html">Experience</a>
+          <a class="active" href="/Pages/Projects.html">Projects</a>
+          <a href="/Pages/Assignments.html">Assignments</a>
+          <a href="/Pages/Skills.html">Skills</a>
+          <a href="/Pages/Gallery.html">Gallery</a>
+          <a href="/Pages/Activities.html">Activities</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="title"><h2>Projects</h2></div>
+
+      <div class="container">
+        <div class="card-container">
+          <div class="card-slider">
+            <a class="card" href="">
+              <img
+                class="card-image"
+                src="/Assets/Images/Srivijaya.png"
+                alt="Srivijaya System ScreenShot"
+              />
+              <div class="layer">
+                <h5>Sri Vijaya Driving School Management System</h5>
+              </div></a
+            >
+
+            <a class="card" href="">
+              <img
+                class="card-image"
+                src="/Assets/Images/Analytical.png"
+                alt="Analytical ScreenShot"
+              />
+              <div class="layer"><h5>Analytics Website</h5></div></a
+            >
+
+            <a class="card" href=""
+              ><img
+                class="card-image"
+                src="/Assets/Images/e-commerce.png"
+                alt="E-Commerce ScreenShot"
+              />
+              <div class="layer"><h5>E-Commerce Website</h5></div></a
+            >
+          </div>
+        </div>
+
+        <div class="arrows">
+          <i id="back-arrow" class="fa-solid fa-angle-left"></i
+          ><i id="forward-arrow" class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+    </main>
+    <script>
+      const slider = document.querySelector(".card-slider");
+      const forwardArrow = document.getElementById("forward-arrow");
+      const backArrow = document.getElementById("back-arrow");
+
+      let currentSlide = 0;
+      const totalSlides = document.querySelectorAll(".card").length;
+
+      slider.style.width = `${totalSlides * 45}vw`;
+
+      forwardArrow.addEventListener("click", () => {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+          updateSliderPosition();
+        }
+      });
+
+      backArrow.addEventListener("click", () => {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateSliderPosition();
+        }
+      });
+
+      function updateSliderPosition() {
+        const slideWidth = document.querySelector(".card").offsetWidth;
+        slider.style.transform = `translateX(-${
+          currentSlide *
+          (slideWidth + slideWidth / 8 + (slideWidth / 8 / 100) * 10)
+        }px)`;
+      }
+    </script>
+  </body>
+</html>
