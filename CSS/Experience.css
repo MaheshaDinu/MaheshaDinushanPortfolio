@@ -38,6 +38,64 @@ body{
 .header-container > nav > .active{
     color: #00FFF0;
 }
+.burger {
+    display: none;
+    color: white;
+    height: 8vw;
+    width: 8vw;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0;
+  }
+  .menu-panel {
+    background-color: #293135;
+    color: white;
+    height: 100%;
+    width: 75vw;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: right 0.4s ease;
+  }
+
+  .menu-panel ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10vw;
+    
+  }
+
+  .menu-panel ul li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+  }
+  .menu-panel ul li:hover{
+    background-color: #424b50;
+    color: #00FFF0;
+  }
+
+  .menu-panel ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "Manjari", sans-serif;
+  }
+  .menu-panel ul li a:hover{
+    color: #00FFF0;
+  }
+
+  .close-btn {
+    background-color: transparent;
+    margin: 3vw;
+    border: none;
+    width: 8vw;
+    height: 8vw;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 main {
     height: 85%;
     font-family: "Lexend Exa", sans-serif;
@@ -77,4 +135,63 @@ main > .detail > ul> li> h5> span{
 main > .detail > ul> li > ul> li{
     padding-right: 5vw;
     list-style: circle;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+}
+  
+  
+@media (min-width: 426px) and (max-width: 768px) {
+    nav a{
+      display: none;
+    }
+    nav .burger{
+      display: block;
+    }
+    
+    .menu-panel.active {
+      right: 0;
+    }
+    
+
+}
+@media (min-width: 376px) and (max-width:425px) {
+  nav a{
+    display: none;
+  }
+  nav .burger{
+      display: block;
+    }
+  
+  .menu-panel.active {
+    right: 0;
+  }
+}
+@media (min-width: 321px) and (max-width:375px) {
+  nav a{
+    display: none;
+  }
+  
+  nav .burger{
+    display: block;
+  }
+  
+  .menu-panel.active {
+    right: 0;
+  }
+}
+@media (max-width:320px) {
+  nav a{
+    display: none;
+  }
+  
+  
+  nav .burger{
+    display: block;
+  }
+  
+  .menu-panel.active {
+    right: 0;
+  }
+  
 }

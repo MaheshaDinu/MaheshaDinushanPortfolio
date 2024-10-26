@@ -22,7 +22,7 @@ body{
     justify-content: center;
     padding: 2vh 0 0 0;
 }
-.header-container > nav > a {
+.header-container > nav >  a {
     text-decoration: none;
     color: white;
     margin: 0 1vw;
@@ -31,13 +31,71 @@ body{
     padding-bottom: 4vh;
     font-weight: 550;
 }
-.header-container > nav > a:hover{
+.header-container > nav >  a:hover{
     cursor: pointer;
     color: #00FFF0;
 }
-.header-container > nav>.active{
+.header-container > nav> .active{
     color: #00FFF0;
 }
+.burger {
+    display: none;
+    color: white;
+    height: 8vw;
+    width: 8vw;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0;
+  }
+  .menu-panel {
+    background-color: #293135;
+    color: white;
+    height: 100%;
+    width: 75vw;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: right 0.4s ease;
+  }
+
+  .menu-panel ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10vw;
+    
+  }
+
+  .menu-panel ul li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+  }
+  .menu-panel ul li:hover{
+    background-color: #424b50;
+    color: #00FFF0;
+  }
+
+  .menu-panel ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: "Manjari", sans-serif;
+  }
+  .menu-panel ul li a:hover{
+    color: #00FFF0;
+  }
+
+  .close-btn {
+    background-color: transparent;
+    margin: 3vw;
+    border: none;
+    width: 8vw;
+    height: 8vw;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 main {
     height: 85%;
     font-family: "Lexend Exa", sans-serif;
@@ -100,3 +158,165 @@ main > .image > img{
     font-weight: 600;
     transition: 1s;
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header-container > h3 {
+        font-size: 1.8rem;
+        margin: 3vh 3vw;
+      }
+      .header-container nav {
+        width: 80%;
+      }
+      .about > h1 {
+        font-size: 2.2rem;
+      }
+      .about > p {
+        font-size: 1rem;
+      }
+      .about > .buttons > button > a {
+        font-size: 1.4rem;
+      }
+  }
+    
+    
+  @media (min-width: 426px) and (max-width: 768px) {
+    .header-container > h3 {
+        font-size: 1.5rem;
+        margin: 2vh 2vw;
+      }
+      nav a {
+        display: none;
+      }
+      nav .burger {
+        display: block;
+      }
+      .menu-panel.active {
+        right: 0;
+      }
+      main {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+      }
+      .image img {
+        width: 80%;
+      }
+      .about {
+        width: 90%;
+        padding: 2vw;
+      }
+      .about > h1 {
+        font-size: 2rem;
+      }
+      .about > .buttons button {
+        width: 40%;
+      }
+      .about > .buttons > button > a {
+        font-size: 1.3rem;
+      }
+  }
+  @media (min-width: 376px) and (max-width:425px) {
+    .header-container > h3 {
+        font-size: 1.4rem;
+        margin: 2vh 2vw;
+      }
+      nav a {
+        display: none;
+      }
+      nav .burger {
+        display: block;
+      }
+      .menu-panel.active {
+        right: 0;
+      }
+      .image img {
+        width: 85%;
+      }
+      .about {
+        width: 90%;
+        padding: 2vw;
+      }
+      .about > h1 {
+        font-size: 1.8rem;
+      }
+      .about > p {
+        font-size: 0.9rem;
+      }
+      .about > .buttons button {
+        width: 45%;
+      }
+      .about > .buttons > button > a {
+        font-size: 1.2rem;
+      }
+  }
+  @media (min-width: 321px) and (max-width:375px) {
+    .header-container > h3 {
+        font-size: 1.2rem;
+      }
+      nav a {
+        display: none;
+      }
+      nav .burger {
+        display: block;
+      }
+      .menu-panel.active {
+        right: 0;
+      }
+      main {
+        flex-direction: column;
+        align-items: center;
+      }
+      .image img {
+        width: 90%;
+      }
+      .about {
+        padding: 3vw;
+      }
+      .about > h1 {
+        font-size: 1.6rem;
+      }
+      .about > .buttons button {
+        width: 50%;
+      }
+      .about > .buttons > button > a {
+        font-size: 1.1rem;
+      }
+  }
+  @media (max-width:320px) {
+    .header-container > h3 {
+        font-size: 1rem;
+        margin: 1vh 1vw;
+      }
+      nav a {
+        display: none;
+      }
+      nav .burger {
+        display: block;
+      }
+      .menu-panel.active {
+        right: 0;
+      }
+      main {
+        flex-direction: column;
+        align-items: center;
+      }
+      .image img {
+        width: 100%;
+      }
+      .about {
+        width: 95%;
+        padding: 5vw;
+      }
+      .about > h1 {
+        font-size: 1.4rem;
+      }
+      .about > p {
+        font-size: 0.8rem;
+      }
+      .about > .buttons button {
+        width: 60%;
+      }
+      .about > .buttons > button > a {
+        font-size: 1rem;
+      }
+    
+  }

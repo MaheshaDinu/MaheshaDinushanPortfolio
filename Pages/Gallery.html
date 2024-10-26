@@ -25,6 +25,12 @@
       <div class="header-container">
         <h3>MAH<span>3</span>X</h3>
         <nav>
+          <img
+            class="burger"
+            id="burger"
+            src="https://img.icons8.com/?size=100&id=8113&format=png&color=00FFF0"
+            alt="burger-menu"
+          />
           <a href="/index.html">Home</a>
           <a href="/Pages/About.html">About</a>
           <a href="/Pages/Education.html">Education</a>
@@ -54,5 +60,39 @@
         </div>
       </div>
     </main>
+    <div class="menu-panel" id="menu-panel-id">
+      <button class="close-btn">
+        <img
+          class="close-btn"
+          id="btn-close"
+          src="https://img.icons8.com/?size=100&id=71200&format=png&color=00FFF0"
+          alt="close-icon"
+        />
+      </button>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/Pages/About.html">About</a></li>
+        <li><a href="/Pages/Education.html">Education</a></li>
+        <li><a href="/Pages/Experience.html">Experience</a></li>
+        <li><a href="/Pages/Projects.html">Projects</a></li>
+        <li><a href="/Pages/Assignments.html">Assignments</a></li>
+        <li><a href="/Pages/Skills.html">Skills</a></li>
+        <li><a href="/Pages/Gallery.html">Gallery</a></li>
+        <li><a href="/Pages/Activities.html">Activities</a></li>
+      </ul>
+    </div>
+    <script>
+      const burger = document.getElementById("burger");
+      const menuPanel = document.getElementById("menu-panel-id");
+      const closeBtn = document.getElementById("btn-close");
+
+      burger.addEventListener("click", () => {
+        menuPanel.classList.toggle("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menuPanel.classList.remove("active");
+      });
+    </script>
   </body>
 </html>
