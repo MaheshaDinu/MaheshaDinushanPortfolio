@@ -168,7 +168,10 @@ main > .image > img{
       right: 0;
     }
     
-
+    .header-container nav{
+      justify-content: end;
+      padding-right: 5vw;
+    }
     
 
     main {
@@ -199,7 +202,10 @@ main > .image > img{
   nav .burger{
       display: block;
     }
-  
+    .header-container nav{
+      justify-content: end;
+      padding-right: 5vw;
+    }
   .menu-panel.active {
     right: 0;
   }
@@ -223,7 +229,10 @@ main .image img {
   nav a{
     display: none;
   }
-  
+  .header-container nav{
+    justify-content: end;
+    padding-right: 5vw;
+  }
   nav .burger{
     display: block;
   }
@@ -252,7 +261,10 @@ main .image img {
   nav a{
     display: none;
   }
-  
+  .header-container nav{
+    justify-content: end;
+    padding-right: 5vw;
+  }
   
   nav .burger{
     display: block;

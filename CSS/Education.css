@@ -148,6 +148,10 @@ main > .detail > ul> li > p > span{
     nav .burger{
       display: block;
     }
+    .header-container nav{
+      justify-content: end;
+      padding-right: 5vw;
+    }
     
     .menu-panel.active {
       right: 0;
@@ -177,6 +181,10 @@ main > .detail > ul> li > p > span{
   nav .burger{
       display: block;
     }
+    .header-container nav{
+      justify-content: end;
+      padding-right: 5vw;
+    }
   
   .menu-panel.active {
     right: 0;
@@ -191,6 +199,9 @@ main {
     padding: 5vh 5vw;
     text-align: center;
 }
+main > .detail > ul> li > p{
+  font-size: 0.9rem;
+}
 }
 @media (min-width: 321px) and (max-width:375px) {
   nav a{
@@ -199,6 +210,10 @@ main {
   
   nav .burger{
     display: block;
+  }
+  .header-container nav{
+    justify-content: end;
+    padding-right: 5vw;
   }
   
   .menu-panel.active {
@@ -219,12 +234,18 @@ main {
     padding: 5vh 5vw;
     text-align: center;
 }
+main > .detail > ul> li > p{
+  font-size: 0.8rem;
+}
 }
 @media (max-width:320px) {
   nav a{
     display: none;
   }
-  
+  .header-container nav{
+    justify-content: end;
+    padding-right: 5vw;
+  }
   
   nav .burger{
     display: block;
@@ -247,5 +268,8 @@ main {
     align-items: center;
     padding: 5vh 5vw;
     text-align: center;
+}
+main > .detail > ul> li > p{
+  font-size: 0.7rem;
 }
 }

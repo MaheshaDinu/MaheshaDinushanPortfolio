@@ -137,7 +137,21 @@ main > .detail > ul> li> h5 , h6{
     font-size: 1.2rem;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-    
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+  }
+
+  main > .image,
+  main > .detail {
+    width: 100%;
+    /* text-align: center; */
+  }
+
+  .header-container nav {
+    justify-content: flex-end;
+  }
 }
   
   
@@ -148,12 +162,24 @@ main > .detail > ul> li> h5 , h6{
     nav .burger{
       display: block;
     }
-    
+    .header-container nav{
+      justify-content: end;
+      padding-right: 5vw;
+    }
     .menu-panel.active {
       right: 0;
     }
     
+    main {
+      flex-direction: column;
+      align-items: center;
+      padding: 2vw;
+  }
 
+  main > .image,
+  main > .detail {
+      width: 100%;
+  }
 }
 @media (min-width: 376px) and (max-width:425px) {
   nav a{
@@ -162,10 +188,23 @@ main > .detail > ul> li> h5 , h6{
   nav .burger{
       display: block;
     }
-  
+    .header-container nav{
+      justify-content: end;
+      padding-right: 5vw;
+    }
   .menu-panel.active {
     right: 0;
   }
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+}
+
+main > .image,
+main > .detail {
+    width: 90%;
+}
 }
 @media (min-width: 321px) and (max-width:375px) {
   nav a{
@@ -175,16 +214,32 @@ main > .detail > ul> li> h5 , h6{
   nav .burger{
     display: block;
   }
-  
+  .header-container nav{
+    justify-content: end;
+    padding-right: 5vw;
+  }
   .menu-panel.active {
     right: 0;
   }
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+}
+
+main > .image,
+main > .detail {
+    width: 90%;
+}
 }
 @media (max-width:320px) {
   nav a{
     display: none;
   }
-  
+  .header-container nav{
+    justify-content: end;
+    padding-right: 5vw;
+  }
   
   nav .burger{
     display: block;
@@ -193,5 +248,15 @@ main > .detail > ul> li> h5 , h6{
   .menu-panel.active {
     right: 0;
   }
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw;
+}
+
+main > .image,
+main > .detail {
+    width: 90%;
+}
   
 }

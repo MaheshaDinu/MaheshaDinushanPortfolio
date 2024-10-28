@@ -145,7 +145,7 @@ main > .detail > ul > li > ul> li{
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
-    
+    transition: 1s;
 }
 main > .detail > ul > li > ul> li> i{
     font-size: 4rem;
@@ -156,10 +156,11 @@ main > .detail > ul > li > ul> li> i{
 main > .detail > ul > li > ul> li:hover{
     background-color: #00FFF0;
     box-shadow: 1px 1px 20px #00FFF0;
+    transform: scale(1.4);
     
 }
 main > .detail > ul > li > ul> li:hover i{
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
 main > .detail > ul > li > ul> li> img{
     height: 4rem;
@@ -167,64 +168,232 @@ main > .detail > ul > li > ul> li> img{
     transition: 1s;
 }
 main > .detail > ul > li > ul> li:hover img{
-    transform: scale(1.5);
+    transform: scale(1.4);
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-    
+  .header-container > h3 {
+    font-size: 1.8rem;
+    margin: 3vh 3vw;
+}
+.header-container nav a {
+    font-size: 0.9rem;
+}
+.burger {
+    height: 6vw;
+    width: 6vw;
+}
+main > .image > img {
+    height: 50%;
+    width: 50%;
+}
+main > .detail > ul {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4vw 0;
+}
+main > .detail > ul > li > ul > li {
+    height: 10vw;
+    width: 10vw;
+    margin-bottom: 25px;
+}
+main > .detail > ul > li > ul > li > i,
+main > .detail > ul > li > ul > li > img {
+    font-size: 3rem;
+    height: 3rem;
+    width: 3rem;
+}
+
 }
   
   
 @media (min-width: 426px) and (max-width: 768px) {
-    nav a{
-      display: none;
-    }
-    nav .burger{
-      display: block;
-    }
-    
-    .menu-panel.active {
-      right: 0;
-    }
+  nav a {
+    display: none;
+}
+nav .burger {
+    display: block;
+    height: 8vw;
+    width: 8vw;
+}
+.header-container > h3 {
+    font-size: 1.6rem;
+    margin: 3vh 3vw;
+}
+.menu-panel.active {
+    right: 0;
+}
+main > .image > img {
+    height: 32vw;
+    width: 32vw;
+}
+main{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+main > .detail > ul {
+    grid-template-columns: 1fr;
+    padding: 3vw 0;
+}
+main > .detail > ul > li > ul > li {
+    height: 10vw;
+    width: 10vw;
+    margin-bottom: 15px;
+}
+main > .detail > ul > li > ul > li > i,
+main > .detail > ul > li > ul > li > img {
+    font-size: 2.5rem;
+    height: 3rem;
+    width: 3rem;
+}
+.header-container nav{
+  justify-content: end;
+  padding-right: 5vw;
+}
     
 
 }
 @media (min-width: 376px) and (max-width:425px) {
-  nav a{
+  nav a {
     display: none;
-  }
-  nav .burger{
-      display: block;
-    }
-  
-  .menu-panel.active {
+}
+nav .burger {
+    display: block;
+    height: 9vw;
+    width: 9vw;
+}
+.header-container > h3 {
+    font-size: 1.5rem;
+    margin: 3vh 3vw;
+}
+.menu-panel.active {
     right: 0;
-  }
+}
+main{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+main > .detail > ul {
+  grid-template-columns: 1fr;
+  padding: 3vw 0;
+}
+main > .image > img {
+    height: 30vw;
+    width: 30vw;
+}
+main > .detail > ul {
+    padding: 3vw 0;
+}
+main > .detail > ul > li > ul > li {
+    height: 12vw;
+    width: 12vw;
+    margin-bottom: 25px;
+}
+main > .detail > ul > li > ul > li > i,
+main > .detail > ul > li > ul > li > img {
+    font-size: 2.3rem;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.header-container nav{
+  justify-content: end;
+  padding-right: 5vw;
+}
 }
 @media (min-width: 321px) and (max-width:375px) {
-  nav a{
+  nav a {
     display: none;
-  }
-  
-  nav .burger{
+}
+nav .burger {
     display: block;
-  }
-  
-  .menu-panel.active {
+    height: 10vw;
+    width: 10vw;
+}
+.header-container > h3 {
+    font-size: 1.4rem;
+    margin: 2vh 3vw;
+}
+.menu-panel.active {
     right: 0;
-  }
+}
+main{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+main > .image > img {
+    height: 30vw;
+    width: 30vw;
+}
+main > .detail > ul {
+    padding: 2vw 0;
+}
+main > .detail > ul > li > ul > li {
+    height: 12vw;
+    width: 12vw;
+    margin-bottom: 20px;
+}
+main > .detail > ul > li > ul > li > i,
+main > .detail > ul > li > ul > li > img {
+    font-size: 2rem;
+    height: 2.3rem;
+    width: 2.3rem;
+}
+main > .detail > ul {
+  grid-template-columns: 1fr;
+  padding: 3vw 0;
+}
+.header-container nav{
+  justify-content: end;
+  padding-right: 5vw;
+}
 }
 @media (max-width:320px) {
-  nav a{
+  nav a {
     display: none;
-  }
-  
-  
-  nav .burger{
+}
+nav .burger {
     display: block;
-  }
-  
-  .menu-panel.active {
+    height: 12vw;
+    width: 12vw;
+}
+.header-container > h3 {
+    font-size: 1.2rem;
+    margin: 2vh 3vw;
+}
+.menu-panel.active {
     right: 0;
+}
+main{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+main > .image > img {
+    height: 30vw;
+    width: 30vw;
+}
+main > .detail > ul {
+    padding: 2vw 0;
+}
+main > .detail > ul > li > ul > li {
+    height: 14vw;
+    width: 14vw;
+    margin-bottom: 15px;
+}
+main > .detail > ul > li > ul > li > i,
+main > .detail > ul > li > ul > li > img {
+    font-size: 1.8rem;
+    height: 2rem;
+    width: 2rem;
+}
+  .header-container nav{
+    justify-content: end;
+    padding-right: 5vw;
+  }
+  main > .detail > ul {
+    grid-template-columns: 1fr;
+    padding: 3vw 0;
   }
   
 }
